@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+@keyframes drop-in {
+	0% {
+		
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+@keyframes rip-in {
+	0% {
+		
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
