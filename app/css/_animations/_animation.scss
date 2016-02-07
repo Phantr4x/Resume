@@ -19,3 +19,14 @@
 		opacity: 1;
 	}
 }
+
+@keyframes console-in {
+	0% {
+		transform-origin: 50% 100%;
+		transform: perspective(300px) rotateX(25deg);
+	}
+	100% {
+		transform-origin: 100% 100%;
+		transform: rotateX(0deg);
+	}
+}

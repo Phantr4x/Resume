@@ -214,7 +214,10 @@ section[data-name=home] p {
 
 section[data-name=about] {
 	left: 100%;
-	background: $grey;
+	// background: $grey url(../imgs/about-bg-filter.jpg);
+	// background-size: cover;
+	background: $cyan;
+	overflow: scroll;
 	// display: table;
 }
 
@@ -227,6 +230,7 @@ section[data-name=about] .console {
 	height: 100vh;
 	margin: 0 auto;
 	margin-top: 64px;
+	margin-bottom: 64px;
 	background: rgba(31,31,31,.7);
 	border-radius: 4px;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
@@ -412,9 +416,101 @@ section[data-name=about] .console-window .item-content .python-bar {
 section[data-name=achieves] {
 	left: 200%;
 	background: $red;
+	overflow: scroll;
 }
+
+section[data-name=achieves] .resume-container {
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 64px;
+}
+
+section[data-name=achieves] [class^="card-box-"] {
+	position: relative;
+	width: 90%;
+	height: 320px;
+	margin-bottom: 32px;
+	border-radius: 2px;
+	background: #FFF;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	transition: .3s ease-out;
+	&:hover {
+		box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+	}
+}
+
+section[data-name=achieves] .card-info {
+	display: -webkit-flex;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	position: absolute;
+	width: 35%;
+	height: 100%;
+	padding: 12px;
+}
+
+section[data-name=achieves] .card-title {
+	display: inline;
+	width: 100%;
+	font: normal 17px/24px 'PingFangSC-Medium', 'Microsoft Yahei', 'SimHei';
+	color: $red;
+}
+
+section[data-name=achieves] .card-text {
+	height: 236px;
+	padding: 12px 0;
+	font: normal 14px/24px 'PingFangSC-Regular', 'Microsoft Yahei', 'SimHei';
+}
+
+section[data-name=achieves] .card-more {
+	align-self: flex-end;
+	height: 36px;
+	padding: 0 2rem;
+	text-align: center;
+	font: normal 15px/36px 'PingFangSC-Light';
+	letter-spacing: .5px;
+	color: #FFF;
+	border-radius: 2px;
+	background: $red;
+	transition: .3s ease-out;
+	&:hover {
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+	}
+}
+
+section[data-name=achieves] .card-bg {
+	position: relative;
+	// align-self: flex-end;
+	float: right;
+	width: 65%;
+	height: 100%;
+	transition: .4s ease-in-out;
+	opacity: .5;
+	&:after {
+		position: absolute;
+		content: '';
+		width: 50%;
+		height: 100%;
+		background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+	}
+	&:hover {
+		opacity: 1;
+	}
+}
+
+section[data-name=achieves] [class="card-box-1"] .card-bg {
+	background: url(../imgs/about-bg.jpg) 50% 4%;
+	background-size: cover;
+}
+
+
+
+// Contact
 
 section[data-name=contact] {
 	left: 300%;
-	background: $cyan;
+	background: $yellow;
 }
