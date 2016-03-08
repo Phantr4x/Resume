@@ -9,7 +9,7 @@ export var ResumePages = {
 
 		that.nav = $('#' + navName);
 		that.main = $('#' + mainName);
-		that.a = $('a');
+		that.a = $("a[href^='#']");
 		that.width = $(document.body).width();
 
 		that.a.bind('click', function(e) {

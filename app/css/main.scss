@@ -159,14 +159,14 @@ section[data-name=home] .avatar {
 	// background-size: cover;
 	border-radius: 50%;
 	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-	
+
 	transform: translateY(-120px);
 	opacity: 0;
 
 	// -webkit-transition: -webkit-transform 340ms ease-in-out;
 	// transition: transform 340ms ease-in-out;
 
-	&:after {
+	&:before {
 		content: "";
 		position: absolute;
 		top: 50%;
@@ -177,9 +177,10 @@ section[data-name=home] .avatar {
 		border-radius: 120%;
 		background: rgba(0,0,0,.15);
 		// box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+		z-index: 0;
 		transition: 340ms ease-in-out;
 	}
-	&:hover:after {
+	&:hover:before {
 		top: -10%;
 		left: -10%;
 		width: 120%;
@@ -217,7 +218,7 @@ section[data-name=about] {
 	// background: $grey url(../imgs/about-bg-filter.jpg);
 	// background-size: cover;
 	background: $cyan;
-	overflow: scroll;
+	overflow: auto;
 	// display: table;
 }
 
@@ -430,7 +431,7 @@ section[data-name=about] .console-window .item-content .python-bar {
 section[data-name=achieves] {
 	left: 200%;
 	background: $red;
-	overflow: scroll;
+	overflow: auto;
 }
 
 section[data-name=achieves] .resume-container {
@@ -491,6 +492,7 @@ section[data-name=achieves] .card-more {
 	background: $red;
 	transition: .3s ease-out;
 	&:hover {
+		background: lighten($red, 10%);
 		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 	}
 }
@@ -516,11 +518,24 @@ section[data-name=achieves] .card-bg {
 }
 
 section[data-name=achieves] [class="card-box-1"] .card-bg {
-	background: url(../imgs/about-bg.jpg) 50% 4%;
+	background: url(../imgs/post-ecjtu-net.png) 50% 0;
 	background-size: cover;
 }
 
+section[data-name=achieves] [class="card-box-3"] .card-bg {
+	background: url(../imgs/tw1nkle.png) 50% 0;
+	background-size: cover;
+}
 
+section[data-name=achieves] [class="card-box-4"] .card-bg {
+	background: url(../imgs/resume.png) 50% 50%;
+	background-size: cover;
+}
+
+section[data-name=achieves] [class="card-box-5"] .card-bg {
+	background: url(../imgs/eva-color-trans.png) 50% 50%;
+	background-size: cover;
+}
 
 // Contact
 
